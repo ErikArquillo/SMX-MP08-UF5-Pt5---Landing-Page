@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Friday Oferta</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function mostrarCompra() {
+            document.getElementById("seccion-compra").style.display = "block";
+            document.getElementById("contenido-principal").style.display = "none";
+        }
+
+        function volverAInicio() {
+            document.getElementById("seccion-compra").style.display = "none";
+            document.getElementById("contenido-principal").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div id="contenido-principal">
+        <header>
+            <h1>BLACK FRIDAY <br><span>OFERTA INCREÍBLE</span></h1>
+            <img src="header-image.jpg" alt="Oferta Black Friday" class="header-image">
+            <button class="cta" onclick="mostrarCompra()">Comprar ahora por 99€</button>
+            <div class="countdown">00:00:00</div>
+        </header>
+
+        <section class="why-choose-us">
+            <h2>¿Por qué elegirnos?</h2>
+            <div class="features">
+                <div class="feature"><img src="fast-shipping.png" alt="Envío rápido">✔ Envío rápido y seguro</div>
+                <div class="feature"><img src="high-quality.png" alt="Alta calidad">✔ Productos de alta calidad</div>
+                <div class="feature"><img src="satisfaction.png" alt="Garantía de satisfacción">✔ Garantía de satisfacción</div>
+            </div>
+        </section>
+
+        <section class="price">
+            <h2>Precio del Año</h2>
+            <div class="price-box">
+                <h3>MEMBRESÍA</h3>
+                <img src="membership.jpg" alt="Oferta de membresía">
+                <p><span class="price-tag">129€</span></p>
+                <button class="cta" onclick="mostrarCompra()">Obtener ahora</button>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <h3>¿Cuánto tiempo dura la oferta?</h3>
+                <p>Esta oferta especial de Black Friday es válida por tiempo limitado.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Cómo puedo obtener un reembolso?</h3>
+                <p>Puedes solicitar un reembolso dentro de los primeros 30 días.</p>
+            </div>
+        </section>
+        
+        <footer>
+            <h2>Oferta Especial</h2>
+            <div class="countdown">00:00:00</div>
+            <button class="cta" onclick="mostrarCompra()">Comprar ahora por 99€</button>
+        </footer>
+    </div>
+
+    <div id="seccion-compra" style="display: none; text-align: center;">
+        <h2>Finalizar Compra</h2>
+        <p>Gracias por elegir nuestra oferta especial. Completa tus datos para realizar la compra.</p>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required><br><br>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" required><br><br>
+
+            <label for="tarjeta">Número de tarjeta:</label>
+            <input type="text" id="tarjeta" required><br><br>
+
+            <button class="cta" type="submit">Confirmar compra</button>
+        </form>
+        <br>
+        <button class="cta" onclick="volverAInicio()">Volver</button>
+    </div>
+</body>
+</html>
